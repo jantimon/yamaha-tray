@@ -1,0 +1,38 @@
+{
+  "name": "yamaha-tray",
+  "private": true,
+  "author": "Jan Nicklas",
+  "version": "1.0.0",
+  "description": "Yamaha Electron Tray",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^8.3.0",
+    "electron-builder": "22.6.1"
+  },
+  "dependencies": {
+    "yamaha-nodejs": "0.9.6"
+  },
+  "build": {
+    "appId": "Yamaha Tray",
+    "productName": "Yamaha Tray",
+    "mac": {
+      "icon": "./build/radio.icns",
+      "extendInfo": {
+        "LSUIElement": 1
+      }
+    },
+    "extraResources": [
+      {
+        "from": "./static",
+        "to": "static",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  }
+}
